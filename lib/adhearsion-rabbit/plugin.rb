@@ -9,7 +9,11 @@ module AdhearsionRabbit
     # Basic configuration for the plugin
     #
     config :adhearsion_rabbit do
-      
+      config.ip = "rabbitmq ip"
+      config.user = "rabbitmq username"
+      config.password = 'rabbitmq password'
+      config.vhost = 'rabbitmq vhost'
+      config.queue_name = 'rabbitmq queue name'
     end
 
     # Defining a Rake task is easy
@@ -27,3 +31,4 @@ module AdhearsionRabbit
 
   end
 end
+
