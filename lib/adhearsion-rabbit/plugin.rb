@@ -9,11 +9,13 @@ module AdhearsionRabbit
     # Basic configuration for the plugin
     #
     config :adhearsion_rabbit do
-      config.ip = "rabbitmq ip"
-      config.user = "rabbitmq username"
-      config.password = 'rabbitmq password'
-      config.vhost = 'rabbitmq vhost'
-      config.queue_name = 'rabbitmq queue name'
+      ip 'localhost', :desc => 'RabbitMQ service ip'
+      user 'user', :desc => "RabbitMQ user name"
+      password 'password', :desc => 'RabbitMQ password'
+      vhost '/', :desc => 'RabbitMQ virtual host'
+      queue_name 'call_queue', 'RabbitMQ queue name'
+      subscriber nil, :desc => 'Object to process queue messages. Should has method process_message
+                                with parameters delivery_info, properties and payload'
     end
 
     # Defining a Rake task is easy
@@ -31,4 +33,3 @@ module AdhearsionRabbit
 
   end
 end
-
