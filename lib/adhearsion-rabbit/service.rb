@@ -12,7 +12,7 @@ module AdhearsionRabbit
 		def bunny_config
 			{ 
 				:host     => Adhearsion.config.adhearsion_rabbit[:ip],
-	            :user     => Adhearsion.config.adhearsion_rabbit[:login],
+	            :user     => Adhearsion.config.adhearsion_rabbit[:user],
 	            :password => Adhearsion.config.adhearsion_rabbit[:password],
 	            :vhost 	  => Adhearsion.config.adhearsion_rabbit[:vhost]
 	        }
