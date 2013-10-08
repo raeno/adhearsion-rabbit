@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    adhearsion_rabbit (0.0.1)
+    adhearsion-rabbit (0.0.1)
       activesupport (>= 3.0.10)
       adhearsion (~> 2.4)
       bunny (>= 1.0.0.rc2)
@@ -147,7 +147,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  adhearsion_rabbit!
+  adhearsion-rabbit!
   bundler (~> 1.0)
   guard-rspec
   rake

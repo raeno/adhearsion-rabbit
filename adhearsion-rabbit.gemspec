@@ -1,17 +1,16 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "adhearsion_rabbit/version"
+require "adhearsion-rabbit/version"
 
 Gem::Specification.new do |s|
-  s.name        = "adhearsion_rabbit"
+  s.name        = "adhearsion-rabbit"
   s.version     = AdhearsionRabbit::VERSION
-  s.authors     = ["Plugin Author"]
-  s.email       = ["author@plugin.com"]
+  s.authors     = ["raeno"]
+  s.email       = ["just.raeno@gmail.com"]
   s.homepage    = ""
   s.summary     = %q{Adhearsion plugin to work with RabbitMQ}
   s.description = %q{This plugin allows to subscribe to RabbitMQ messages and publish new}
 
-  s.rubyforge_project = "adhearsion_rabbit"
 
   # Use the following if using Git
   # s.files         = `git ls-files`.split("\n")
