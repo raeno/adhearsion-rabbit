@@ -3,7 +3,7 @@ module AdhearsionRabbit
     # Actions to perform when the plugin is loaded
     #
     init :adhearsion_rabbit do
-      Service.start
+      Service.new.start
     end
 
     # Basic configuration for the plugin
