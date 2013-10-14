@@ -20,10 +20,10 @@ module AdhearsionRabbit
 
 		def start
 			begin
-			    @queue_processor = QueueProcessor.new(@channel)
-			    queue_name = Adhearsion.config.adhearsion_rabbit[:queue_name]
-				@queue_processor.start(queue_name)
-			rescue Interrupt => _
+			    @queue_processor = Adhearsion.config.adhearsion_rabbit[:queue_processor]
+			    @queue_processor.set_channel @channel
+				@queue_processor.start
+			rescue
 			  @channel.close
 			  @conn.close
 			end

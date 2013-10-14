@@ -10,12 +10,10 @@ module AdhearsionRabbit
     #
     config :adhearsion_rabbit do
       ip 'localhost', :desc => 'RabbitMQ service ip'
-      user 'user', :desc => "RabbitMQ user name"
+      user 'user', :desc => 'RabbitMQ user name'
       password 'password', :desc => 'RabbitMQ password'
       vhost '/', :desc => 'RabbitMQ virtual host'
-      queue_name 'call_queue', 'RabbitMQ queue name'
-      subscriber nil, :desc => 'Object to process queue messages. Should has method process_message
-                                with parameters delivery_info, properties and payload'
+      queue_processor nil, :desc => 'Object to process queue messages. See "sample_queue_processor" for more details'
     end
 
     # Defining a Rake task is easy
